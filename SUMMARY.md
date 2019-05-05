@@ -2,6 +2,7 @@
 
 * [readme](README.md)
 * [html](html/html.md)
+    * [1.0-练习](html/1-0.md)
     * [1.1-浏览器介绍](html/1-1.md)
     * [1.2-HTML基本结构](html/1-2.md)
     * [1.3-HTML常用标签](html/1-3.md)
