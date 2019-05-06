@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>01-HTML表单和表单控件-注册表单</title>
+    <style>
+    td{
+        height: 33px;
+    }
+    </style>
+</head>
+
+<body>
+    <form action="#">
+        <table border="0" align="center">
+                <tr align="center">
+                    <th colspan="3">用户注册中心</th>
+                </tr>
+                <tr>
+                    <td style="width:100px ;height:33px" align="right">用户名：</td>
+                    <td style="width:173px ;height:33px" ><input type="text">
+                        <font color="red">*</font>
+                    </td>
+                </tr>
+                <tr>
+                    <td align="right">密码：</td>
+                    <td><input type="text">
+                        <font color="red">*</font>
+                    </td>
+                </tr>
+                <tr>
+                    <td align="right">确认密码：</td>
+                    <td ><input type="text">
+                        <font color="red">*</font>
+                    </td>
+                </tr>
+                <tr>
+                    <td align="right">中国0086：</td>
+                    <td><input type="text">
+                        <font color="red">*</font>
+                    </td>
+                </tr>
+                <tr>
+                    <td align="right">验证码：</td>
+                    <td>
+                        <table>
+                            <tr>
+                                <td>
+                                    <input style="width:60px" type="text">
+                                    <font color="red">*</font>
+                                </td>
+                                <td>
+                                    <img src="./images/1.7-1/yan.png" width="80" height="24">
+                                </td>
+                            </tr>
+                        </table>
+                        
+                    </td>
+                </tr>
+                <tr>
+                        <td align="right">手机验证：</td>
+                        <td>
+                            <table>
+                                <tr>
+                                    <td>
+                                        <input style="width:60px" type="text">
+                                        <font color="red">*</font>
+                                    </td>
+                                    <td>
+                                        <input type="button" value="发送验证码">
+                                    </td>
+                                </tr>
+                            </table>
+                            
+                        </td>
+                    </tr>
+                <tr>
+                    <td colspan="2" align="right">
+                        <input type="radio">阅读同意<a href="#" style="color:blue">用户注册协议</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2">
+                        <div align="center" style="width:50%;float:left">
+                            <input  type="reset" value="重置">
+                        </div>
+                        <div align="center" style="width:50%;float:left">
+                            <input type="submit" value="提交">
+                        </div>
+                    </td>
+                </tr>
+            </table>
+    </form>
+</body>
+
+</html>
