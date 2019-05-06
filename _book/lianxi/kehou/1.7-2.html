@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>02-HTML表单和表单控件-个人信息收集表单</title>
+    <style>
+        h1{
+            text-align: center;
+        }
+        td{
+            height: 40px;
+            text-align: center;
+            padding: 10px;
+        }
+
+    </style>
+</head>
+<body>
+    <form action="#" method="POST" name="gerenxingxi">
+        <h1>个人信息</h1>
+        <table align="center" border="1" cellspacing="0" cellpadding="0">
+            <tr>
+                <td>姓名</td>
+                <td>
+                    <input type="text" placeholder="填写姓名">
+                </td>
+                <td>相片</td>
+                <td>
+                    <input type="file">
+                </td>
+            </tr>
+            <tr>
+                <td>性别</td>
+                <td>
+                    <input type="radio" value="男" />男
+                    <input type ="radio" value="女" checked="checked" />女
+                </td>
+                <td>爱好</td>
+                <td>
+                    <input type="checkbox" value="吃饭" checked="checked" />吃饭
+                    <input type="checkbox" value="吃饭" checked="checked" />睡觉
+                    <input type="checkbox" value="吃饭" />上网<br>
+                    <input type="checkbox" value="吃饭" />听歌
+                    <input type="checkbox" value="吃饭" />泡妞
+                    <input type="checkbox" value="吃饭" />洗澡
+                </td>
+            </tr>
+            <tr>
+                <td>地址</td>
+                <td colspan="3">
+                    <select name="dizhi-1" id="dizhi-1">
+                        <option value="jiangxi">江西省</option>
+                        <option selected="selected" value="anhui">安徽省</option>
+                        <option value="bj">北京</option>
+                        <option value="shandong">山东</option>
+                    </select>
+                    <select name="dizhi-2" id="dizhi-2">
+                        <option value="hefei">合肥市</option>
+                        <option value="shenghai">上海</option>
+                        <option value="beijing">北京</option>
+                    </select>
+                </td>
+            </tr>
+            <tr style="height:60px">
+                <td>自我描述</td>
+                <td colspan="3">
+                    <textarea  name="miaoshu" id="" cols="90" rows="6" >小宝小宝你最帅
+                    </textarea>
+                </td>
+            </tr>
+            <tr>
+                <td>密码</td>
+                <td colspan="3">
+                    <input size="80" type="password" />
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2">
+                    <input type="reset" value="重置" />
+                </td>
+                <td colspan="2">
+                    <input type="submit" value="提交" />
+                </td>
+            </tr>
+        </table>
+    </form>
+</body>
+</html>

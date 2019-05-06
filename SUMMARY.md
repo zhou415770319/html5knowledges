@@ -12,6 +12,7 @@
     * [1.7-表单和表单控件](html/1-7.md)
     * [1.8-HTML5 新增标签和属性](html/1-8.md)
 * [css](css/css.md)
+    * [2.0-练习](html/2-0.md)
     * [2.1-CSS介绍](html/2-1.md)
     * [2.2-font字体](html/2-2.md)
     * [2.3-CSS基本选择器](html/2-3.md)
