@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>01-CSS外观样式及应用-背景透明文字不透明</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+        }
+        body{
+            padding: 50px;
+            background: url(./images/2.4-1/bg.png) 0 0 repeat;
+        }
+        .back{
+            padding: 20px;
+            background-color: rgba(0, 0, 0, 0.4);
+        }
+        .back p{
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <div class="back">
+        <p>背景透明，文字不透明</p>
+    </div>
+</body>
+</html>

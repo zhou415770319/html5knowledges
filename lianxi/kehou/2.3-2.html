@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>02-CSS基本选择器-结构伪类选择器应用</title>
+    <style>
+        table{
+            width: 100%;
+            text-align: center;
+            border: 0px;
+        }
+        th{
+            background: #ccc;
+        }
+        tr:nth-child(2n){
+            background: #ededed;
+        }
+
+        tr:hover:nth-child(2n){
+            background: #888;
+        }
+
+    </style>
+</head>
+<body>
+    <table rules="none"; cellpadding=0; cellspacing=0;>
+        <thead>
+            <th>序号</th>
+            <th>姓名</th>
+            <th>性别</th>
+            <th>年龄</th>
+            <th>学历</th>
+            <th>住址</th>
+        </thead>
+        <tbody>
+                <tr>
+                        <td>1</td>
+                        <td>宋江</td>
+                        <td>男</td>
+                        <td>未知</td>
+                        <td>进士</td>
+                        <td>梁山</td>
+                        
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>项羽</td>
+                        <td>男</td>
+                        <td>未知</td>
+                        <td>幼儿园未毕业</td>
+                        <td>江苏宿迁西南</td>
+                        
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td>张飞</td>
+                        <td>男</td>
+                        <td>未知</td>
+                        <td>无</td>
+                        <td>河北涿州</td>
+                        
+                    </tr>
+                    <tr>
+                        <td>4</td>
+                        <td>曹操</td>
+                        <td>男</td>
+                        <td>年龄</td>
+                        <td>本硕连读毕业</td>
+                        <td>安徽亳州市</td>
+                        
+                    </tr>
+                    <tr>
+                        <td>5</td>
+                        <td>刘备</td>
+                        <td>男</td>
+                        <td>未知</td>
+                        <td>大专</td>
+                        <td>河北涿州</td>
+                        
+                    </tr>
+                    <tr>
+                        <td>6</td>
+                        <td>吕布</td>
+                        <td>男</td>
+                        <td>未知</td>
+                        <td>本硕</td>
+                        <td>内蒙古自治区包头市</td>
+                    </tr>
+        </tbody>
+    </table>
+</body>
+</html>
