@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>02-CSS外观样式及应用-字体阴影应用</title>
+    <style>
+        .text{
+            width: 360px;
+            margin: 20px;
+            padding: 20px;
+            font: bold 50px "微软雅黑";
+            border: 1px solid red;
+        }
+        .shadow1{
+            text-shadow: 0px 0 8px #F00;
+        }
+        .shadow2{
+            text-shadow: 5px 5px 8px #F00;
+        }
+        .shadow3{
+            text-shadow: -5px -5px 8px #F00;
+        }
+        .shadow4{
+            filter:shadow(Color=#f00000,Direction=45,Strength=8);
+        }
+    </style>
+</head>
+<body>
+    <p class="text shadow1">博学谷学习中心</p>
+    <p class="text shadow2">博学谷学习中心</p>
+    <p class="text shadow3">博学谷学习中心</p>
+
+    <p class="text shadow4">博学谷学习中心</p>
+</body>
+</html>

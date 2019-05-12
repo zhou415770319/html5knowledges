@@ -1,0 +1,247 @@
+/* 公共样式 */
+.con{
+    width: 1190px;
+    margin: 0 auto;
+}
+blockquote,body,button,dd,dl,dt,fieldset,form,h1,h2,h3,h4,h5,h6,hr,input,legend,li,ol,p,pre,td,textarea,th,ul{
+	margin: 0;
+	padding: 0;
+}
+
+a{
+    font-size: 18px;
+    color: #000;
+    text-decoration: none;
+}
+a:hover{
+    color: pink;
+}
+
+ul{
+    list-style: none;
+}
+.fl{
+    float: left;
+}
+
+.fr{
+    float: right;
+}
+.clip-10{
+    border-radius: 10px;
+    overflow: hidden;
+    border: none;
+}
+
+/* header 部分 start */
+header{
+    height: 145px;
+    /* background: pink; */
+}
+.navcon{
+    position: relative;
+    height: 115px;
+}
+/* 标题导航 */
+.title-nav{
+    background: #f7f7f7;
+    height: 30px;
+    line-height: 30px;
+}
+
+.title-nav a{
+    font-size: 12px;
+}
+.title-nav a:nth-child(1){
+    color: #a5a5a5;
+}
+.title-nav a:nth-child(1):hover{
+    color: pink;
+}
+.title-nav span{
+    padding: 0 15px;
+    color: #a5a5a5;
+    font-size: 12px;
+}
+/* .title-nav a:nth-child(2){
+    color: red;
+} */
+/* logo部分 */
+.logo{
+    padding-top: 20px;
+}
+.logo a{
+    display: block;
+    width: 250px;
+    height: 40px;
+    background: url(../images/logo.png)  no-repeat;
+}
+/* 登陆部分 */
+.login-nav{
+    font-size: 14px;
+    position: absolute;
+    top: 27px;
+    right: 0;
+}
+.login-nav a{
+    padding-left: 20px;
+}
+.login-nav span{
+    padding-left: 20px;
+}
+/* 导航条 部分 */
+.navitems{
+    height: 40px;
+    line-height: 40px;
+    position: absolute;
+    bottom: 0;
+    left: 230px;
+}
+.navitems li{
+    float: left;
+    padding-left: 40px;
+}
+/* 搜索部分 */
+.search{
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 245px;
+    height: 40px;
+}
+.search-box{
+    width: 245px;
+    height: 30px;
+    border: 1px solid #a5a5a5;
+    border-radius: 15px;
+    overflow: hidden;
+}
+.search-box input{
+    height: 30px;
+    line-height: 30px;
+    border: none;
+    outline: none;
+    margin-left: 10px; 
+}
+.search-box button{
+    width: 60px;
+    /* height: 30px; */
+    /* line-height: 30; */
+    border: none;
+    background-color:none;
+}
+.search span{
+    float: left;
+    color: #a5a5a5;
+    padding-right: 20px;
+}
+.search-box a{
+    display: block;
+    float: left;
+    width: 20px;
+    height: 20px;
+    background: url(../images/search.png) no-repeat;
+}
+
+/* .title-nav+.logo+.login-nav+.navitems+.search */
+
+/* header 部分 end */
+
+/* main 部分 start */
+main{
+    background: #f0f0f0;
+}
+/* main 部分 end */
+/* footer 部分start */
+footer{
+    height: 300px; /* 210+90 */
+    background: #333;
+    color: white;
+
+}
+footer a{
+    color: white;
+    font-size: 14px;
+}
+/* footer top */
+.footer-t{
+    height: 210px;
+    border-bottom: 1px solid #393e46;
+}
+footer h3{
+    padding-top: 50px;
+}
+/* 简介 */
+.jianjie{
+    width: 420px;
+    height: 210px;
+    box-sizing: border-box;
+}
+.jianjie p{
+    padding-top: 25px;
+    font-size: 14px;
+    line-height: 20px;
+}
+/* 关注 */
+.guanzhu{
+    width: 250px;
+    height: 210px;
+    padding-left: 55px;
+    box-sizing: border-box;
+
+}
+.link-box{
+    padding-top: 25px;
+}
+.guanzhu a{
+    display: block;
+    width: 50px;
+    height: 50px;
+    float: left;
+}
+.guanzhu a:nth-child(1){
+    background: url(../images/weibo.png) no-repeat;
+    padding-right: 20px;
+}
+.guanzhu a:nth-child(2){
+    background: url(../images/weixin.png) no-repeat;
+}
+/* 链接 */
+.lianjie{
+    width: 520px;
+    height: 210px;
+}
+.lianjie-box{
+    padding-top: 25px;
+    line-height: 37px;
+    width: 500px;
+}
+.lianjie-box a{
+    display: block;
+    float: left;
+    font-size: 14px;
+    padding-right: 30px;
+    color: white;
+}
+/* 420+250+520 */
+/* .jianjie+.guanzhu+.lianjie */
+
+/* footer bottom */
+.footer-b{
+    height: 90px;
+    position: relative;
+}
+.footer-b p{
+    text-align: center;
+}
+.footer-b p:nth-child(1){
+    padding-top: 30px;
+}
+.footer-b p:nth-child(2){
+    font-size: 14px;
+    padding-top: 20px;
+    text-align: center;
+    
+}
+/* footer 部分end */
+
