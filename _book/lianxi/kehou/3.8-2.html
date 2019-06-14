@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>JavaScript对象-计算时间差</title>
+</head>
+<body>
+    <script>
+        function timeInterval(time){
+            var now = new Date();
+            var last = new Date(time);
+            var interval = Math.abs(last.getTime()-now.getTime());
+            //计算出相差天数
+            var days=Math.floor(interval/(24*3600*1000));
+            //计算出小时数
+            var leave1=interval%(24*3600*1000); //计算天数后剩余的毫秒数
+            var hours=Math.floor(leave1/(3600*1000));
+            //计算相差分钟数
+            var leave2=leave1%(3600*1000); //计算小时数后剩余的毫秒数
+            var minutes=Math.floor(leave2/(60*1000));
+            //计算相差秒数
+            var leave3=leave2%(60*1000); //计算分钟数后剩余的毫秒数
+            var seconds=Math.round(leave3/1000);
+            console.log(time+"和当前时间相差 "+days+"天 "+hours+"小时 "+minutes+" 分钟"+seconds+" 秒");
+            document.write(time+"和当前时间相差 "+days+"天 "+hours+"小时 "+minutes+" 分钟"+seconds+" 秒");
+        }
+
+        var time = timeInterval("2019/6/2");
+    </script>
+</body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>JavaScript内置对象-判断某个字符在字符串中出现的位置和出现次数</title>
+</head>
+<body>
+    <script>
+        var str ='丽丽是一个女生，丽丽今年已经24岁了，丽丽的属相是狗。'  
+        var s = '丽丽';  
+        var i=0;  
+        
+        var num = 0;  
+        while (str.indexOf(s,i) != -1) {
+            num++;
+            console.log("第"+num+"次的下标:"+str.indexOf(s,i));
+            i=str.indexOf(s,i)+s.length;
+        }
+        console.log("总共查找到："+num+"次");
+
+    </script>
+</body>
+</html>

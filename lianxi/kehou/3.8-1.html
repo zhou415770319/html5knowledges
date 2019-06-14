@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>JavaScript对象-删除年龄大于50岁的员工</title>
+</head>
+<body>
+    <script>
+        var arr = [
+            {id:1,name:"林冲",age:24,sex:"男"},
+            {id:2,name:"关羽",age:35,sex:"男"},
+            {id:3,name:"张飞",age:52,sex:"男"},
+            {id:4,name:"刘备",age:56,sex:"男"}
+            ];
+        for (const key in arr) {
+            if (arr.hasOwnProperty(key)) {
+                const element = arr[key];
+                if(element.age >50){
+                    delete(arr[key]);
+                }
+            }
+        }
+        document.write(arr);
+    </script>
+</body>
+</html>

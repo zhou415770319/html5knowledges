@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>offset、client、scroll三大家族介绍及应用-分享案例</title>
+    <style>
+        .share {
+            width: 100px;
+            height: 200px;
+            position: fixed;
+            left: -100px;
+            top: 100px;
+            background-color: cyan;
+        }
+        
+        .share span {
+            width: 20px;
+            height: 60px;
+            line-height: 20px;
+            text-align: center;
+            position: absolute;
+            left: 100px;
+            top: 70px;
+            background-color: yellow;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="share" id="share"><span>分享到</span></div>
+</body>
+<script>
+    var share = document.getElementById("share");
+    share.onmouseover = function() {
+        animate(this, "left", 0);
+    };
+    share.onmouseout = function() {
+        animate(this, "left", -100);
+    };
+    /* 动画方法封装 */
+    function animate(tag, attr, target) {
+        clearInterval(tag.timer);
+        tag.timer = setInterval(() => {
+            var leader = parseInt(getStyle(tag, attr)) || 0;
+            var step = (target - leader) / 10;
+            step = target > leader ? Math.ceil(step) : Math.floor(step);
+            leader = leader + step;
+            tag.style[attr] = leader + "px";
+            if (leader == target) {
+                clearInterval(tag.timer);
+            }
+        }, 10);
+    }
+
+    function getStyle(tag, attr) {
+        return tag.currentStyle ? tag.currentStyle[attr] : getComputedStyle(tag, null)[attr];
+    }
+</script>
+
+</html>

@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>注册事件及应用-点击案例</title>
+</head>
+<body>
+    <input type="button" value="我是一个button" id="btn"><label for="btn">button</label>
+    <script>
+    var btn = document.getElementById("btn");
+    btn.onclick = function onclick(){
+        alert(this.value);
+    }
+    </script>
+</body>
+</html>

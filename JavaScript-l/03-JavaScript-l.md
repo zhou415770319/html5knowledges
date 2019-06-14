@@ -4,7 +4,7 @@
   - 掌握 JavaScript 面向对象开发相关模式
   - 掌握在 JavaScript 中使用正则表达式
   
-typora-copy-images-to media
+# typora-copy-images-to media
 ---
 
 # JavaScript 高级

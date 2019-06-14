@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>JavaScript流程控制及应用-正反链接倒三角</title>
+    <script>
+    var n = 9;
+	//上倒三角
+	for(var i=n; i>0; i--){
+		//控制空格输出的个数
+		for(var k=i;k<n;k++){
+			document.write("&nbsp;&nbsp;");
+		}
+		//控制数字的输出个数
+		for(var j=0; j<i; j++){
+			document.write(i + "&nbsp;&nbsp;");
+		}
+		document.write("<br>");
+	}
+
+	//下正三角（从2开始）
+	for(var i=2; i<=n; i++){
+		//控制空格输出的个数
+		for(var k=i;k<n;k++){
+			document.write("&nbsp;&nbsp;");
+		}
+		//控制数字的输出个数
+		for(var j=0; j<i; j++){
+			document.write(i + "&nbsp;&nbsp;");
+		}
+		document.write("<br>");
+	}
+        
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

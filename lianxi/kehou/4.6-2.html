@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>动态创建元素及应用-百度搜索框</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        input{
+            border: none;
+            padding: 0;
+            margin: 0;
+            outline: none;
+        }
+        ul{
+            list-style: none;
+        }
+        #cont{
+            width: 450px;
+            margin: 200px auto;
+            position: relative;
+        }
+        #searchText{
+            float: left;
+            width: 300px;
+            height: 30px;
+            padding-left: 10px;
+            border: 1px solid #ccc;
+        }
+        #searchBtn{
+            float: left;
+            width: 100px;
+            height: 32px;
+            line-height: 32px;
+            border: none;
+            background-color: cyan;
+        }
+        #pop{
+            position: absolute;
+            float: left;
+            width: 310px;
+            top: 32px;
+            left: 0;
+            border: 1px solid #ccc;
+        }
+        #pop li{
+            padding-left: 5px;
+        }
+        #pop li:hover{
+            background-color: #ccc;
+        }
+    </style>
+</head>
+<body>
+    <div id="cont">
+        <input type="text" id="searchText">
+        <input type="button" id="searchBtn" value="百度一下">
+        <div id="pop">
+            <ul>
+                <li>abc</li>
+            </ul>
+        </div>
+    </div>
+
+    <script>
+        //模拟词库
+        var datas = ["a", "abc", "abbbb", "abxxxx", "xyz", "abcdef", "abzzzz"];
+        // 获取页面元素
+        var cont = document.getElementById("cont");
+
+        var searchText = document.getElementById("searchText");
+        var searchBtn = document.getElementById("searchBtn");
+        // keyup事件
+        searchText.onkeyup = function () {
+            // 用户输入为空
+            if (this.value == "") {
+                return;
+            }
+            // 保存满足条件的词汇
+            var resultArr = [];
+
+            // 获取pop
+            var pop = document.getElementById("pop");
+            // 如果存在 先删除
+            if (pop) {
+                cont.removeChild(pop);
+            }
+            // 遍历词库 和用户输入做比较 结果存入resultArr
+            for (const index in datas) {
+                if (datas.hasOwnProperty(index)) {
+                    var item = datas[index];
+                    if (item.indexOf(this.value) == 0) {
+                        resultArr[resultArr.length] = item;
+                    }
+                }
+            }
+
+            // 判断resultArr length 
+            if (resultArr.length == 0) {
+                return;
+            }
+            // 根据得到的resultArr 创建pop
+            var popItem = document.createElement("div");
+            popItem.id = "pop";
+            cont.appendChild(popItem);
+            var ulElem = document.createElement("ul");
+            popItem.appendChild(ulElem);
+            // 根据resultArr 创建li
+            var li;
+            resultArr.forEach(result => {
+                li = document.createElement("li");
+                li.textContent = result;
+                ulElem.appendChild(li);
+            });
+        }
+
+    </script>
+</body>
+</html>

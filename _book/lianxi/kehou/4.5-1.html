@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>节点介绍及应用-上,下兄弟元素的获取</title>
+    <style>
+        
+    </style>
+</head>
+<body>
+    <ul>
+        <li>节点介绍及应用节点介绍及应用</li>
+        <li>节点介绍及应用节点介绍及应用</li>
+        <li>节点介绍及应用节点介绍及应用</li>
+        <li>节点介绍及应用节点介绍及应用</li>
+        <li>节点介绍及应用节点介绍及应用</li>
+        <li>节点介绍及应用节点介绍及应用</li>
+        <li>节点介绍及应用节点介绍及应用</li>
+        <li>节点介绍及应用节点介绍及应用</li>
+    </ul>
+
+    <script>
+    var lis = document.getElementsByTagName('li');
+    for (const index in lis) {
+        if (lis.hasOwnProperty(index)) {
+            const item = lis[index];
+            item.onclick = function (){
+                for (const i in lis) {
+                    if (lis.hasOwnProperty(i)) {
+                        const tem = lis[i];
+                        tem.style.backgroundColor = '#fff';
+                    }
+                }
+                //当前选中的元素
+                // this.style.backgroundColor = 'cyan';
+                //当前选中元素的下一个元素
+                this.nextElementSibling.style.backgroundColor = 'cyan';
+
+            }
+        }
+    }
+    </script>
+</body>
+</html>
