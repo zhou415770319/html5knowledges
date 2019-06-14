@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>02-CSS清除浮动-个人相册</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        /*万能清除浮动开始*/
+		.clearfix:after { visibility: hidden; display: block; font-size: 0; content: " "; clear: both; height: 0; }
+		.clearfix { display: inline-table; } /* Hides from IE-mac */
+		.clearfix { display: block; }
+        a{
+            text-decoration: none;
+            color: #111;
+        }
+        ul{
+            list-style: none;
+        }
+        .warp{
+            /* display: inline-block; */
+            margin: 10px auto;
+            width: 1000px;
+        }
+
+        
+        .category li{
+            float: left;
+            padding: 10px;
+            background: #666;
+            margin-right: 20px;
+        }
+        .category li a{
+            color: white;
+        }
+        .content{
+            margin-top: 30px;
+            width: 100%;
+            
+        }
+        .content li{
+            width: 200px;
+            float: left;
+            padding: 0 10px;
+        }
+        .content li img{
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <div class="warp">
+        <div class="category clearfix">
+            <ul>
+                <li><a href="#">
+                    艺术摄影
+                </a></li>
+                <li><a href="#">
+                    婚纱摄影
+                </a></li>
+                <li><a href="#">
+                    纪实摄影
+                </a></li>
+                <li><a href="#">
+                    儿童摄影
+                </a></li>
+                <li><a href="#">
+                    摄影器材
+                </a></li>
+                <li><a href="#">
+                    创意摄影
+                </a></li>
+            </ul>
+        </div>
+        <div class="content clearfix">
+            <ul>
+                <li>
+                    <a href="#">
+                        <img src="./images/2.12-2/objpic01.jpg" alt="tupian">
+                        <p>摄影艺术</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <img src="./images/2.12-2/objpic01.jpg" alt="tupian">
+                        <p>摄影艺术</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <img src="./images/2.12-2/objpic01.jpg" alt="tupian">
+                        <p>摄影艺术</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <img src="./images/2.12-2/objpic01.jpg" alt="tupian">
+                        <p>摄影艺术</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <img src="./images/2.12-2/objpic01.jpg" alt="tupian">
+                        <p>摄影艺术</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <img src="./images/2.12-2/objpic01.jpg" alt="tupian">
+                        <p>摄影艺术</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <img src="./images/2.12-2/objpic01.jpg" alt="tupian">
+                        <p>摄影艺术</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <img src="./images/2.12-2/objpic01.jpg" alt="tupian">
+                        <p>摄影艺术</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <img src="./images/2.12-2/objpic01.jpg" alt="tupian">
+                        <p>摄影艺术</p>
+                    </a>
+                </li>
+                
+            </ul>
+        </div>
+        <div class="pages clearfix">
+            <a href="#">46条记录 1/6 页</a>
+        </div>
+    </div>
+</body>
+</html>

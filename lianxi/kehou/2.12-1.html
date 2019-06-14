@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>01-CSS清除浮动-文章推荐信息</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        a{
+            text-decoration: none;
+            color: skyblue;
+        }
+        .warp{
+            /* display: inline-block; */
+            margin: 10px auto;
+            width: 1000px;
+        }
+        ul{
+            list-style: none;
+        }
+        .banner img{
+            width: 100%;
+        }
+        .content h3{
+            text-align: center;
+            border-bottom: 1px solid #ccc;
+            margin-bottom: 30px;
+            padding-bottom: 5px;;
+        }
+        .content p{
+            text-indent: 2em;
+        }
+        .pages{
+            width: 100%;
+            margin: 20px 0;
+            padding-bottom: 5px;
+            border-bottom: 1px solid #ccc;
+            overflow: hidden;
+
+        }
+        pages span{
+            color: black;
+        }
+        .pages .pre{
+            float: left;
+            margin-left: 200px;
+        }
+        .pages .next{
+            float: right;
+            margin-right: 200px;
+        }
+        .recommend{
+            width: 100%;
+            overflow: hidden;
+        }
+        .recommend h3{
+
+        }
+        .recommend ul{
+            width: 50%;
+            margin: 20px;
+        }
+        .recommend ul:nth-child(1){
+            float: left;
+        }
+        .recommend ul:nth-child(2){
+            float: right;
+        }
+        .footer{
+            height: 100px;
+            line-height: 100px;
+            width: 100%;
+            background: #ccc;
+        }
+        .footer p{
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="warp">
+        <div class="banner">
+            <img src="./images/2.11-1/banner_n.jpg" alt="tupian">
+        </div>
+        <div class="position">
+            当前位置：首页 > 关于我们
+        </div>
+        <div class="content">
+            <h3>文章详情标题</h3>
+            <p>水墨（风格）摄影和传统的水墨画一样，现市面上出现的水墨摄影作品，按题材，可以分为风景和花鸟，对应国画中的山水画和花鸟画；按手法和意境，可以分为抽象和具象，对应国画中的写意和工笔。 水墨风格的摄影照片虽然免不了使用Photoshop等软件的后期加工，但是这并不意味着可以任意扭曲原照片。全息摄影是指一种记录被摄物体反射波的振幅和位相等全部信息的新型摄影技术。普通摄影是记录物体 面上的光强分布，它不能记录物体反射光的位相信息，因而失去了立体感。全息摄影采用激光作为照明光源，并将光源发出的光分为两束，一束直接射向感光片，另一束经被摄物的反射后再射向感光片。人眼直接去看这种感光的底片，只能看到像指纹一样的干涉条纹，但如果用激光去照射它，人眼透过底片就能看到原来被拍摄物体完全相同的三维立体像。一张全息摄影图片即使只剩下一小部分，依然可以重现全部景物。全息摄影可应用于工业上进行无损探伤，超声全息，全息显微镜，全息摄影存储器,全息电影和电视等许多方面。</p>
+        </div>
+        <div class="pages">
+            <div class="pre"><a href="#"><span>上一篇:</span>美丽的半岛</a></div>
+            <div class="next"><a href="#"><span>下一篇:</span>寒冷的男孩</a></div>
+        </div>
+        <div class="recommend">
+            <h3>推荐信息</h3>
+                <ul>
+                    <li><a href="#">推荐文章</a></li>
+                    <li><a href="#">墨风格的摄影</a></li>
+                    <li><a href="#">墨风格的摄影照片虽</a></li>
+                    <li><a href="#">推荐文章</a></li>
+                    <li><a href="#">墨风格的摄影照片虽然免不</a></li>
+                </ul>
+            
+                <ul>
+                    <li><a href="#">推荐文章</a></li>
+                    <li><a href="#">摄物体完全相同的三维立体像</a></li>
+                    <li><a href="#">被拍摄物体的三维立体像</a></li>
+                    <li><a href="#">被拍摄物体完全相同的三维</a></li>
+                    <li><a href="#">被拍摄物体完全相体像</a></li>
+                </ul>
+        </div>
+        <div class="footer"><p>版权信息</p></div>
+    </div>
+</body>
+</html>

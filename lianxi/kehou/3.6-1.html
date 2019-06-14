@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>JavaScript数组及应用-求平均年龄</title>
+</head>
+<body>
+    <script>
+        function getAvgAge(arr){
+            // 总年龄
+            var sum = 0;
+            var num = 0;//总个数
+            var avg = 0;//平均年龄
+            for(var i=0;i<arr.length;i++){
+                if(arr[i][1]=="男"&&arr[i][3]=="web"){
+                    sum +=arr[i][2];
+                    num++;
+                }
+            }
+            return avg = parseFloat(sum/num).toFixed(2);
+        }
+
+        var arr = [ 
+            ['小A','女',21,'web'],['小B','男',23,'C'],
+            ['小C','男',20,'web'],['小D','女',21,'PHP'],
+            ['小E','女',22,'C'],['小F','男',21,'web'],
+            ['小G','女',22,'JAVA'],['小H','女',20,'JAVA'],
+            ['小I','女',20,'web'],['小J','男',20,'web']
+            ];
+        console.log("web男的平均年龄是"+getAvgAge(arr));
+        document.write("web男的平均年龄是"+getAvgAge(arr));
+
+
+    </script>
+</body>
+</html>

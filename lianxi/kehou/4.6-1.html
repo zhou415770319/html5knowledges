@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>动态创建元素及应用-添加和删除元素</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        ul {
+            list-style: none
+        }
+        .box{
+            width: 600px;
+            margin: 100px auto;
+            border: 1px solid #ccc;
+            padding: 20px;
+        }
+        textarea{
+            width: 450px;
+            resize: none;
+            outline: none;
+        }
+        ul{
+            width: 450px;
+            padding-left: 70px;
+        }
+        ul input{
+            float: right;
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <span>微博发布</span>
+        <textarea name="" id="content" cols="30" rows="10"></textarea>
+        <button id="btn">发布</button>
+        <ul id="ul">
+
+        </ul>
+    </div>
+    <script>
+        // 获取页面元素
+        //获取btn
+        var btn = document.getElementById("btn");
+        var content = document.getElementById("content");
+        var ul = document.getElementById("ul");
+
+        // btn点击事件
+        btn.onclick = function () {
+            if (content.value == "") {
+                alert("请填写内容");
+            }else{
+                // 创建li
+                var li = document.createElement("li");
+                li.textContent = content.value;
+                // 创建删除按钮
+                li.innerHTML += "<input type='button' id='deleteBtn' value='删除'>";
+                // 添加到ul的第一个元素
+                ul.insertBefore(li,ul.children[0]);
+                // 添加删除事件
+                var deleteBtn = document.getElementById("deleteBtn");
+
+                deleteBtn.onclick = function () {
+                    ul.removeChild(this.parentNode);
+                }
+                
+                // 发布完成后清除内容
+                content.value = "";
+            }
+        }
+
+
+    </script>
+</body>
+</html>
