@@ -1,0 +1,250 @@
+body {
+    width: 100%;
+    min-width: 320px;
+    max-width: 640px;
+    margin: 0 auto;
+    font-size: 14px;
+    font-family: -apple-system, Helvetica, sans-serif;
+    color: #666;
+    line-height: 1.5;
+}
+
+ul {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+img {
+    vertical-align: middle;
+}
+
+input {
+    padding: 0;
+    margin: 0;
+    border: none;
+}
+
+a {
+    text-decoration: none;
+    color: #666;
+}
+
+.clearfix::after {
+    content: "";
+    display: block;
+    line-height: 0;
+    visibility: hidden;
+    height: 0;
+    clear: both;
+}
+
+
+/* 顶部 */
+
+.header {
+    overflow: hidden;
+}
+
+.header ul {
+    width: 100%;
+    background-color: #333;
+}
+
+.header ul li {
+    float: left;
+    height: 45px;
+    background-color: #333;
+    color: #fff;
+    line-height: 45px;
+    text-align: center;
+}
+
+.header ul li:nth-child(1) {
+    width: 8%;
+}
+
+.header ul li:nth-child(1) img {
+    width: 10px;
+}
+
+.header ul li:nth-child(2) {
+    width: 10%;
+}
+
+.header ul li:nth-child(2) img {
+    width: 30px;
+}
+
+.header ul li:nth-child(3) {
+    width: 57%;
+}
+
+.header ul li:nth-child(4) {
+    width: 25%;
+    background-color: #F63515;
+}
+
+
+/* 搜索 */
+
+.search-cont {
+    height: 44px;
+    position: fixed;
+    overflow: hidden;
+    width: 100%;
+    min-width: 320px;
+    max-width: 640px;
+}
+
+.search-menu {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 40px;
+    height: 44px;
+}
+
+.search-menu::before {
+    content: "";
+    display: block;
+    width: 20px;
+    height: 18px;
+    background: url(../images/s-btn.png) no-repeat;
+    background-size: 20px 18px;
+    margin: 14px 0 0 15px;
+}
+
+.search {
+    height: 30px;
+    margin: 0 50px;
+    background-color: #fff;
+    border-radius: 15px;
+    margin-top: 7px;
+    position: relative;
+    overflow: hidden;
+}
+
+.jd-icon {
+    width: 20px;
+    height: 15px;
+    position: absolute;
+    top: 8px;
+    left: 13px;
+    background: url(../images/jd.png) no-repeat;
+    background-size: 20px 15px;
+}
+
+.jd-icon::after {
+    content: "";
+    width: 1px;
+    height: 15px;
+    background-color: #ccc;
+    position: absolute;
+    right: -10px;
+    top: 0;
+}
+
+.sou-icon {
+    width: 18px;
+    height: 15px;
+    background: url(../images/jd-sprites.png) no-repeat -81px 0;
+    background-size: 200px auto;
+    position: absolute;
+    top: 8px;
+    left: 53px;
+}
+
+.search input {
+    width: 100%;
+    text-indent: 75px;
+    height: 30px;
+    line-height: 30px;
+    padding-right: 10px;
+}
+
+.login {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 40px;
+    height: 44px;
+    line-height: 44px;
+    font-size: 14px;
+    color: #fff;
+}
+
+
+/* 主体部分 */
+
+.main-cont {}
+
+
+/* 轮播图 */
+
+.slider {}
+
+.slider img {
+    width: 100%;
+}
+
+
+/* 小家电品牌日 */
+
+.brand {}
+
+.brand div {
+    width: 33.33%;
+    float: left;
+}
+
+.brand div img {
+    width: 100%;
+}
+
+
+/* nav部分 */
+
+nav {
+    text-align: center;
+}
+
+nav a {
+    width: 20%;
+    float: left;
+}
+
+nav a img {
+    width: 40px;
+    height: 40px;
+    margin: 10px 0;
+}
+
+nav span {
+    display: block;
+}
+
+
+/* 新闻部分 */
+
+.news {
+    margin-top: 20px;
+}
+
+.news a {
+    width: 25%;
+    float: left;
+    box-sizing: border-box;
+}
+
+.news a:nth-child(1) {
+    width: 50%;
+}
+
+.news a:nth-child(n+2) {
+    border-left: 1px solid #ccc;
+}
+
+.news a img {
+    width: 100%;
+}

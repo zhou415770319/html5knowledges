@@ -42,14 +42,19 @@
     * [2.27-文本溢出](html/2-27.md)
     * [2.28-盒子水平和垂直居中](html/2-28.md)
 * [javascript](javascript/javascript.md)
-    * [3.0-练习](javascript/3-0-javascript-eg.md)
+    * [javascript-练习](javascript/3-0-javascript-eg.md)
 
 * [webAPI](webAPI/02-WebAPI.md)
-    * [4.0-练习](webAPI/4-0.md)
+    * [webAPI-练习](webAPI/4-0.md)
 * [JavaScript高级](JavaScript-l/03-JavaScript-l.md)
-    <!-- * [5.0-练习](javascript/3-0.md) -->
+    * [JavaScript高级-练习](javascript-l/5-0.md)
 * [JQuery](JQuery/04-JQuery.md)
     <!-- * [6.0-练习](javascript/3-0.md) -->
 
-
+* [Flex伸缩布局](flex/flex.md)
+    * [Flex伸缩布局-练习](flex/lianxi.md)
+* [移动web开发](yidong-web/web.md)
+    * [移动web开发-练习](yidong-web/lianxi.md)
+* [前后端交互](Ajax/ajax.md)
+    * [前后端交互-练习](Ajax/lianxi.md)
 * [leetcode](leetcode/leetcode.md)

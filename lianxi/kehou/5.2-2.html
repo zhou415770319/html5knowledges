@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>面向对象介绍及应用-拖拽</title>
+    <style>
+        div {
+            width: 200px;
+            height: 200px;
+            position: absolute;
+        }
+        
+        body :nth-child(1) {
+            background: cyan;
+        }
+        
+        body :nth-child(2) {
+            background: skyblue;
+            left: 200px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="div1"></div>
+    <div id="div2"></div>
+    <script>
+        window.onload = function() {
+            var drag1 = new Drag('div1');
+            var drag2 = new Drag('div2');
+            drag1.init();
+            drag2.init();
+        }
+
+        function Drag(id) {
+            this.obj = document.getElementById(id);
+            this.disX = 0;
+            this.disY = 0;
+        }
+        Drag.prototype.init = function() {
+                var that = this;
+                this.obj.onmousedown = function(e) {
+                    var e = e || window.event;
+                    that.fnDown(e);
+                    document.onmousemove = function(e) {
+                        var e = e || window.event;
+                        that.fnMove(e);
+                    }
+                    document.onmouseup = function(e) {
+                        var e = e || window.event;
+                        that.fnUp(e);
+                    }
+                }
+            }
+            // 按下鼠标方法
+        Drag.prototype.fnDown = function(e) {
+            this.disX = e.clientX - this.obj.offsetLeft;
+            this.disY = e.clientY - this.obj.offsetTop;
+        }
+        Drag.prototype.fnMove = function(e) {
+            this.obj.style.left = e.clientX - this.disX + 'px';
+            this.obj.style.top = e.clientY - this.disY + 'px';
+        }
+        Drag.prototype.fnUp = function(e) {
+            document.onmouseup = null;
+            document.onmousemove = null;
+        }
+    </script>
+</body>
+
+</html>
